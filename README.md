@@ -1,2 +1,2 @@
 # HotUploader
-Uploader Telegram Bot
+Hot Uploader
