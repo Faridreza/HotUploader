@@ -20,12 +20,13 @@ if __name__!="__main__":
             [KeyboardButton("لیست لینک ها⚙️")],
             [KeyboardButton("تعداد کاربران🔢")],
             [KeyboardButton("ارسال پیام همه گانی📩")],
+            [KeyboardButton("حذف ادمین🗑️"),KeyboardButton("افزودن ادمین👤")],
         ]
         return ReplyKeyboardMarkup(KeyBoard,resize_keyboard=True)
 
-    def InlineChanell(getlist:list):
+    def InlineChanell(getlist:list,keyfilename:str):
         KeyBoard=[]
         for i in getlist:
                 KeyBoard.append([InlineKeyboardButton(i[1],url=f"https://t.me/{i[2]}")])
-
+        KeyBoard.append([InlineKeyboardButton("عضو شدم",url=f"https://t.me/Horneylover_bot?start={keyfilename}")])
         return InlineKeyboardMarkup(KeyBoard)
